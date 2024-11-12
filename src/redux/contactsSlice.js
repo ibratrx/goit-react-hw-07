@@ -64,7 +64,7 @@ export const selectContacts = (state) => state.contacts.items;
 export const selectFilterName = (state) => state.filters.name;
 
 // Селектор для получения видимых контактов, отфильтрованных по имени
-export const selectVisibleContacts = createSelector(
+export const selectFilteredContacts = createSelector(
   [selectContacts, selectFilterName],
   (contacts, filter) => {
     return contacts.filter((contact) =>

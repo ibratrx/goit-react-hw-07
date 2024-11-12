@@ -1,12 +1,12 @@
 import { useSelector, useDispatch } from "react-redux";
 import { deleteContact } from "../../redux/contactsOps";
-import { selectVisibleContacts } from "../../redux/contactsSlice";
+import { selectFilteredContacts } from "../../redux/contactsSlice";
 import Contact from "../Contact/Contact.jsx";
 import styles from "./ContactList.module.css";
 
 // Компонент для отображения списка контактов
 const ContactList = () => {
-  const contacts = useSelector(selectVisibleContacts); // Получаем список видимых контактов из состояния
+  const contacts = useSelector(selectFilteredContacts); // Получаем список видимых контактов из состояния
   const dispatch = useDispatch(); // Функция для отправки действий (actions)
 
   return (
